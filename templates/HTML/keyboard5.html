@@ -1,0 +1,50 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Corsair K70
+{% endblock %}
+
+{% block product_name2 %}
+Corsair K70
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/keyboard5.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Corsair K70 Gaming keyboard
+{% endblock %}
+
+{% block product_price %}
+1990
+{% endblock %}
+
+{% block product_store %}
+Corsair Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/corsair.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Experience all-day comfort with low-profile, low travel keys. Cherry MX Low Profile RGB Red
+    mechanical key switches, provide a familiar smooth and linear movement with 1.2mm actuation</li>
+<li>An all-new slim-line design effortlessly fits into modern desktop </li>
+<li>Aircraft-grade anodized aluminum frame ensures a lifetime of gaming</li>
+<li>Multi-color RGB per-key backlighting, now brighter than ever thanks to redesigned low profile
+    key switches</li>
+<li>Intuitive and powerful CORSAIR iCUE software enables vivid dynamic RGB lighting control,
+    sophisticated macro programming and full-system lighting synchronization compatible with CORSAIR
+    components</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Corsair K70') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Corsair K70,') }}
+{% endblock %}

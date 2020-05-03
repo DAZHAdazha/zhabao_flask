@@ -1,0 +1,52 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Meizu 16Xs 64GB
+{% endblock %}
+
+{% block product_name2 %}
+Meizu 16Xs 64GB
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/phone3.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Meizu 16Xs 64GB
+{% endblock %}
+
+{% block product_price %}
+2290
+{% endblock %}
+
+{% block product_store %}
+Meizu Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/meizu.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Width: 78.2mm </li>
+<li>height: 159.63mm </li>
+<li>thickness: 8.3mm </li>
+<li>weight: 183G
+<li>battery: 4500mAh (typical value) capacity 6GB 128GB / 8GB 128GB / 8GB </li>
+<li>Size: 6.5 inches </li>
+<li>Screen: ratio 18.6:9 </li>
+<li>Resolution: 2232 x 1080 </li>
+<li>Contrast: 100000:1 </li>
+<li>PPI: 382 </li>
+<li>Brightness: 430nit (typical) </li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Meizu 16Xs') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Meizu 16Xs,') }}
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+vivo NEX 3 128GB
+{% endblock %}
+
+{% block product_name2 %}
+vivo NEX 3 128GB
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/phone5.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+vivo NEX 3 128GB
+{% endblock %}
+
+{% block product_price %}
+5599
+{% endblock %}
+
+{% block product_store %}
+vivo Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/vivo.html
+{% endblock %}
+
+{% block product_specification %}
+                    <li>Width: 74.4mm </li>
+                    <li>height: 153.1mm </li>
+                    <li>thickness: 8.65mm </li>
+                    <li>weight: 169.7g </li>
+                    <li>battery: 4000mAh (typical value) </li>
+                    <li>capacity: 4GB 64GB6GB 64GB 4GB 128GB</li>
+                    <li>size: 6.2</li>
+                    <li>Resolution: 2244 x 1080 </li>
+                    <li>Contrast: 1500:1 </li>
+                    <li>PPI: 403 </li>
+                    <li>Brightness: 450 cd/ m (typical) </li>
+                    <li>Manufacturing process: In-Cell all-fit</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='vivo NEX 3') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='vivo NEX 3,') }}
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Bose QuietComfort 35 wireless headphones II
+{% endblock %}
+
+{% block product_name2 %}
+Bose QuietComfort 35 wireless headphones II
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/headphone6.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Bose QuietComfort 35 wireless headphones II
+{% endblock %}
+
+{% block product_price %}
+2499
+{% endblock %}
+
+{% block product_store %}
+Bose Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/bose.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Proprietary technology clears away the noisy distractions of the world so you can get deeper into your music, your work</li>
+<li>Astonishing sound at any volume</li>
+<li>Battery life up to 20 hours</li>
+<li>Bose AR is a first-of-its-kind audio augmented reality platform</li>
+<li>The Bose Connect app gives you easy access to everything your product has to offer</li>
+<li>Headphones:7.1" H x 6.7" W x 3.2" D (8.3 oz)</li>
+<li>Audio cable:47.2"</li>
+<li>USB cable:12"</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Bose QC35') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Bose QC35,') }}
+{% endblock %}

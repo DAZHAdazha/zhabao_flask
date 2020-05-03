@@ -1,0 +1,45 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+SteelSeries Apex 7
+{% endblock %}
+
+{% block product_name2 %}
+SteelSeries Apex 7
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/keyboard3.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+SteelSeries Apex 7 keyboard
+{% endblock %}
+
+{% block product_price %}
+500
+{% endblock %}
+
+{% block product_store %}
+SteelSeries Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/steelseries.html
+{% endblock %}
+
+{% block product_specification %}
+                    <li>Adjustable mechanical switch for customization of key sensitivity</li>
+                    <li>8-fold response speed,5-fold trigger speed, and 2-time key life</li>
+                    <li>OLED Smart Display with intuitive game and application information</li>
+                    <li>5000 Series Removable magnetic adsorption wrist</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Apex 7') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Apex 7,') }}
+{% endblock %}

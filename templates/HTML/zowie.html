@@ -1,0 +1,118 @@
+{% extends './navi.html' %}
+{% block main %}
+<div class="container grey">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="head">
+                    Zowie
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                      Price  
+                </div>
+                </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Product
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Seller
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-3">
+                    <div class="height">
+                            <img title="Zowie BenQ" src="{{ url_for('static',filename='img/keyboard4.jpg') }}" alt="Zowie BenQ">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="myorders">
+                        800
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/keyboard4.html">
+                                    <u>
+                                        Zowie BenQ
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/zowie.html">
+                                    <u>
+                                        Zowie Store
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-3">
+                        <div class="height">
+                                <img title="Zowie S2" src="{{ url_for('static',filename='img/mouse3.jpg') }}" alt="Zowie S2">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="myorders">
+                            530
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="myorders">
+                                    <a href="../HTML/mouse3.html">
+                                        <u>
+                                            Zowie S2
+                                        </u>
+                                    </a>
+                                </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="myorders">
+                                    <a href="../HTML/zowie.html">
+                                        <u>
+                                            Zowie Store
+                                        </u>
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-3">
+                            <div class="height">
+                                    <img title="Zowie Hammer" src="{{ url_for('static',filename='img/headphone2.jpg') }}" alt="Zowie Hammer">
+                            </div>  
+                        </div>
+                        <div class="col-md-3">
+                            <div class="myorders">
+                                430
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                                <div class="myorders">
+                                        <a href="../HTML/headphone2.html">
+                                            <u>
+                                                Hammer
+                                            </u>
+                                        </a>
+                                    </div>
+                        </div>
+                        <div class="col-md-3">
+                                <div class="myorders">
+                                        <a href="../HTML/zowie.html">
+                                            <u>
+                                                Zowie Store
+                                            </u>
+                                        </a>
+                                    </div>
+                        </div>
+                    </div>
+    </div>
+</div>
+{% endblock %}

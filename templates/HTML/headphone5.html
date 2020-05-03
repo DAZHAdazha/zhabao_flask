@@ -1,0 +1,49 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Solo Wireless
+{% endblock %}
+
+{% block product_name2 %}
+Solo Wireless
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/headphone5.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Beats Solo Wireless HiFi wireless headphone
+{% endblock %}
+
+{% block product_price %}
+1990
+{% endblock %}
+
+{% block product_store %}
+Beats Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/beats.html
+{% endblock %}
+
+{% block product_specification %}
+                    <li>Headphones:7.1" H x 5.5" W x 2.4" D (5.7 oz)</li>
+                    <li>Audio cable only:47.2"</li>
+                    <li>USB cable:12"</li>
+                    <li>Carrying case:5" H x 5" W x 2.3" D</li>
+                    <li>Wireless range: 30 ft (9 m)</li>
+                    <li>Battery life: Up to 15 hours</li>
+                    <li>Charging time: 1.5 hours for full charge</li>
+                    <li>Quick charge: 15 minutes for 2 hours play time</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Solo Wireless') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Solo Wireless,') }}
+{% endblock %}

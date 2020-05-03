@@ -1,0 +1,66 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Apple iphone 8 plus
+{% endblock %}
+
+{% block product_name2 %}
+Apple iphone 8 plus
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/phone6.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+iphone 8 plus
+{% endblock %}
+
+{% block product_price %}
+4999
+{% endblock %}
+
+{% block product_store %}
+Apple Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/apple.html
+{% endblock %}
+
+{% block product_specification %}
+                        <li>Retina HD display</li>
+                        <li>5.5-inch (diagonal) widescreen LCD Multi-Touch display with IPS technology</li>
+                        <li>1920-by-1080-pixel resolution at 401 ppi</li>
+                        <li>1300:1 contrast ratio (typical)</li>
+                        <li>Weight: 7.13 ounces (202 grams)</li>
+                        <li>True Tone display</li>
+                        <li>Wide color display (P3)</li>
+                        <li>3D Touch</li>
+                        <li>625 nits max brightness (typical)</li>
+                        <li>Dual-domain pixels for wide viewing angles</li>
+                        <li>Fingerprint-resistant oleophobic coating</li>
+                        <li>Support for display of multiple languages and characters simultaneously</li>
+                        <li>Display Zoom</li>
+                        <li>Reachability</li>
+                        <li>Optical image stabilization</li>
+                        <li>Six‑element lens</li>
+                        <li>LED True Tone flash with Slow Sync</li>
+                        <li>Panorama (up to 63MP)</li>
+                        <li>Live Photos with stabilization</li>
+                        <li>Wide color capture for photos and Live Photos</li>
+                        <li>Auto HDR for photos</li>
+                        <li>Auto image stabilization</li>
+                        <li>Burst mode</li>
+                        <li>Photo geotagging</li>
+                        <li>Image formats captured: HEIF and JPEG</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='iphone 8 plus') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='iphone 8 plus,') }}
+{% endblock %}

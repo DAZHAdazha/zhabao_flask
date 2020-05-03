@@ -1,0 +1,57 @@
+{% extends './navi.html' %}
+{% block main %}
+<div class="container grey">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="head">
+                    Samsung
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                      Price  
+                </div>
+                </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Product
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Seller
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-3">
+                    <div class="height">
+                            <img title="Galaxy S10" src="{{ url_for('static',filename='img/phone4.jpg') }}" alt="Galaxy S10">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="myorders">
+                        7500
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/phone4.html">
+                                    <u>
+                                        Galaxy S10
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/samsung.html">
+                                    <u>
+                                        Samsung
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

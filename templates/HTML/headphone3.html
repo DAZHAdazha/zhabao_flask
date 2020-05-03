@@ -1,0 +1,48 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Logitech H340
+{% endblock %}
+
+{% block product_name2 %}
+Logitech H340
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/headphone3.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Logitech H340 HiFi gaming headphone
+{% endblock %}
+
+{% block product_price %}
+330
+{% endblock %}
+
+{% block product_store %}
+Logitech Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/logitech.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Frequency response: 20 Hz – 20 kHz</li>
+<li>Impedance: 32 ± 15% Ω</li>
+<li>Sensitivity: 115 ± 3 dB</li>
+<li>Max input power:50 mW</li>
+<li>Drivers: 40 mm with Neodymium magnets</li>
+<li>Cable length:1.3 m / 4.27 ft.</li>
+<li>Approximate weight: 294 g / 0.65 lbs</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Logitech H340') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Logitech H340,') }}
+{% endblock %}

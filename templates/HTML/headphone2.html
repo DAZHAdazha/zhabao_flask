@@ -1,0 +1,51 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Zowie Hammer
+{% endblock %}
+
+{% block product_name2 %}
+Zowie Hammer
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/headphone2.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Zowie Hammer high quality gaming headphone
+{% endblock %}
+
+{% block product_price %}
+430
+{% endblock %}
+
+{% block product_store %}
+Zowie Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/zowie.html
+{% endblock %}
+
+{% block product_specification %}
+<li> response: 20 Hz – 20 kHz</li>
+<li>Impedance: 32 Ω @ 1 kHz</li>
+<li>Sensitivity (@1 kHz): 112 dB</li>
+<li>Drivers: 50 mm, with Neodymium magnets</li>
+<li>Inner ear cup diameter: 65 x 60 mm</li>
+<li>Connection type: USB Digital</li>
+<li>Cable length: 2.0 m / 6.56 ft.</li>
+<li>Approx. weight: 390 g / 0.86 lbs</li>
+<li>Oval ear cushions: Designed for full-ear coverage with cooling gel, for sound isolation and
+    comfort</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Hammer') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Hammer,') }}
+{% endblock %}

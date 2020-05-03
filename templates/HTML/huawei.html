@@ -1,0 +1,57 @@
+{% extends './navi.html' %}
+{% block main %}
+<div class="container grey">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="head">
+                    Huawei
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                      Price  
+                </div>
+                </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Product
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Seller
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-3">
+                    <div class="height">
+                            <img title="Huawei Mate30Pro" src="{{ url_for('static',filename='img/phone2.jpg') }}" alt="Huawei Mate30Pro">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="myorders">
+                        5400
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/phone2.html">
+                                    <u>
+                                        Mate30 Pro
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/huawei.html">
+                                    <u>
+                                        Huawei Store
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

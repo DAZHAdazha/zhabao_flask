@@ -1,0 +1,46 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Rival 600
+{% endblock %}
+
+{% block product_name2 %}
+Rival 600
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/mouse4.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Rival 600 gaming mouse
+{% endblock %}
+
+{% block product_price %}
+180
+{% endblock %}
+
+{% block product_store %}
+SteelSeries Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/steelseries.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Exclusive Quantum Wireless offers lag-free 1000Hz (1ms) gaming</li>
+<li>15-minutes of fast charging delivers 10+ hours of game play</li>
+<li>True 1 to 1 tracking precision with TrueMove3 optical sensor</li>
+<li>Dedicated secondary depth sensor for instant lift off detection</li>
+<li>256 center of gravity weight tuning configurations</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Rival 600') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Rival 600,') }}
+{% endblock %}

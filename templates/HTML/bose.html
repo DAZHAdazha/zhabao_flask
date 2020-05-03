@@ -1,0 +1,87 @@
+{% extends './navi.html' %}
+{% block main %}
+<div class="container grey">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="head">
+                    Bose
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                      Price  
+                </div>
+                </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Product
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Seller
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-3">
+                    <div class="height">
+                            <img title="Bose NC700" src="{{ url_for('static',filename='img/headphone4.jpg') }}" alt="Bose NC700">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="myorders">
+                        2000
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/headphone5.html">
+                                    <u>
+                                            Bose NC700
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/bose.html">
+                                    <u>
+                                        Bose Store
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-3">
+                        <div class="height">
+                                <img title="Bose QuietComfort 35 wireless headphones II" src="{{ url_for('static',filename='img/headphone6.jpg') }}" alt="Bose QuietComfort 35 wireless headphones II">
+                        </div>  
+                    </div>
+                    <div class="col-md-3">
+                        <div class="myorders">
+                            2499
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="myorders">
+                                    <a href="../HTML/headphone6.html">
+                                        <u>
+                                                 QuietComfort 35 
+                                        </u>
+                                    </a>
+                                </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="myorders">
+                                    <a href="../HTML/bose.html">
+                                        <u>
+                                            Bose Store
+                                        </u>
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+    </div>
+{% endblock %}

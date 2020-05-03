@@ -1,0 +1,60 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Logitech G502
+{% endblock %}
+
+{% block product_name2 %}
+Logitech G502
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/mouse2.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Logitech G502 gaming mouse
+{% endblock %}
+
+{% block product_price %}
+350
+{% endblock %}
+
+{% block product_store %}
+Logitech Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/logitech.html
+{% endblock %}
+
+{% block product_specification %}
+<li>True 20,000 DPI Focus+ optical sensor with 99.6% resolution accuracy</li>
+<li>Up to 650 inches per second (IPS) / 50 G acceleration</li>
+<li>Advanced Lift-off/Landing distance customization</li>
+<li>HyperSpeed wireless technology</li>
+<li>Eight independently programmable buttons</li>
+<li>True Ambidextrous shape</li>
+<li>Gaming-grade tactile scroll wheel</li>
+<li>On-The-Fly Sensitivity Adjustment (Default stages : 400/800/1600/2400/3200)</li>
+<li>Hybrid On-board and Cloud Storage (4+1 profiles)</li>
+<li>Inter-device color synchronization</li>
+<li>Wired and Wireless usage modes</li>
+<li>2.4 GHz dongle</li>
+<li>1.8 m / 6 ft Speedflex cable for charging and wired use</li>
+<li>Battery life: Approximately 70 hours (without lighting) (Battery life depends on usage settings)
+</li>
+<li>Approximate size: 126.7 mm / 4.99 in (Length) X 66.2 mm / 2.61 in (Width) X 37.8 mm / 1.49 in
+    (Height)</li>
+<li>Approximate weight: 74 g / 2.61 oz (Excluding cable)</li>
+<li>Compatible with Xbox One for basic input</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Logitech G502') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Logitech G502,') }}
+{% endblock %}

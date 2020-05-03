@@ -1,0 +1,47 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Zowie S2
+{% endblock %}
+
+{% block product_name2 %}
+Zowie S2
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/mouse3.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Zowie S2 gaming mouse
+{% endblock %}
+
+{% block product_price %}
+530
+{% endblock %}
+
+{% block product_store %}
+Zowie Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/zowie.html
+{% endblock %}
+
+{% block product_specification %}
+<li>3360 sensor</li>
+<li>No drivers needed, plug and play</li>
+<li>Ergonomic design exclusively for right-handed users</li>
+<li>Optical mouse with optimal lift-off distance</li>
+<li>400 / 800 / 1600 / 3200 DPI adjustment</li>
+<li>Adjustable USB report rate 125 / 500 / 1000 Hz</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Zowie S2') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Zowie S2,') }}
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Logitech G903
+{% endblock %}
+
+{% block product_name2 %}
+Logitech G903
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/mouse6.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Logitech G903
+{% endblock %}
+
+{% block product_price %}
+979
+{% endblock %}
+
+{% block product_store %}
+Logitech Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/logitech.html
+{% endblock %}
+
+{% block product_specification %}
+<li>1 ms LIGHTSPEED WIRELESS</li>
+<li>110g LIGHTWEIGHT, SUPER STRONG</li>
+<li>AMBIDEXTROUS UP TO 11 BUTTONS</li>
+<li>Logitech G invented LIGHTSPEED wireless technology</li>
+<li>Add POWERPLAY, the world's first wireless gaming mouse charging system</li>
+<li>G903 comes equipped with the PMW3366 optical sensor with zero smoothing</li>
+<li>Exclusive clock-tuning technology significantly reduces sensor power draw</li>
+<li>Configurable ambidextrous buttons</li>
+<li>MAX DPI 12,000</li>
+<li>Zero smoothing/acceleration/filtering</li>
+<li>Max. acceleration: >40G 3Tested on Logitech G240 Gaming Mouse Pad</li>
+<li>Max. speed: >400 IPS 4Tested on Logitech G240 Gaming Mouse Pad</li>
+<li>USB data format: 16 bits/axis</li>
+<li>USB report rate: 1000 Hz (1ms)</li>
+<li>Wireless report rate: 1000 Hz (1ms)</li>
+<li>Wireless technology: LIGHTSPEED Wireless</li>
+<li>Microprocessor: 32-bit ARM</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Logitech G903') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Logitech G903,') }}
+{% endblock %}

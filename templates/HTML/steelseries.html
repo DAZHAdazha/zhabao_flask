@@ -1,0 +1,89 @@
+{% extends './navi.html' %}
+{% block main %}
+<div class="container grey">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="head">
+                    SteelSeries
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                      Price  
+                </div>
+                </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Product
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Seller
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                    <div class="col-md-3">
+                        <div class="height">
+                                <img title="SteelSeries Apex 7" src="{{ url_for('static',filename='img/keyboard3.jpg') }}" alt="SteelSeries Apex 7">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="myorders">
+                            500
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="myorders">
+                                    <a href="../HTML/keyboard3.html">
+                                        <u>
+                                            Apex 7
+                                        </u>
+                                    </a>
+                                </div>
+                    </div>
+                    <div class="col-md-3">
+                            <div class="myorders">
+                                    <a href="../HTML/steelseries.html">
+                                        <u>
+                                            SteelSeries
+                                        </u>
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-3">
+                            <div class="height">
+                                    <img title="Rival 600" src="{{ url_for('static',filename='img/mouse4.jpg') }}" alt="Rival 600">
+                            </div>  
+                        </div>
+                        <div class="col-md-3">
+                            <div class="myorders">
+                                180
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                                <div class="myorders">
+                                        <a href="../HTML/mouse4.html">
+                                            <u>
+                                                Rival 600
+                                            </u>
+                                        </a>
+                                    </div>
+                        </div>
+                        <div class="col-md-3">
+                                <div class="myorders">
+                                        <a href="../HTML/steelseries.html">
+                                            <u>
+                                                SteelSeries
+                                            </u>
+                                        </a>
+                                    </div>
+                        </div>
+                    </div>
+    </div>
+</div>
+
+{% endblock %}

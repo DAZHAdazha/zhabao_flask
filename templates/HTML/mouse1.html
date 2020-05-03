@@ -1,0 +1,54 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Razer DeathAdder
+{% endblock %}
+
+{% block product_name2 %}
+Razer DeathAdder
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/mouse1.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Razer DeathAdder gaming mouse high DPI
+{% endblock %}
+
+{% block product_price %}
+250
+{% endblock %}
+
+{% block product_store %}
+Razer Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/razer.html
+{% endblock %}
+
+{% block product_specification %}
+<li>True 16,000 DPI optical sensor</li>
+<li>Up to 450 inches per second (IPS) / 50 G acceleration</li>
+<li>Seven independently programmable Hyperesponse buttons</li>
+<li>Razer™ Mechanical Mouse Switches with 50 million-click life cycle</li>
+<li>Gaming-grade tactile scroll wheel</li>
+<li>Ergonomic right-handed design</li>
+<li>1000 Hz Ultrapolling</li>
+<li>Powered by Razer Chroma™</li>
+<li>Razer Synapse 3 (Beta) enabled</li>
+<li>Seven-foot, lightweight, braided fiber cable</li>
+<li>Approximate size: 127 mm / 5 in (Length) x 70 mm / 2.76” (Width) x 44 mm / 1.73 in (Height)</li>
+<li> Approximate weight: 105 g / 0.23 lbs</li>
+<li> Compatible with Xbox One for basic input</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='DeathAdder') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='DeathAdder,') }}
+{% endblock %}

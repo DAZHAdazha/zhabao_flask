@@ -1,0 +1,57 @@
+{% extends './navi.html' %}
+{% block main %}
+<div class="container grey">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="head">
+                    Beats
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                      Price  
+                </div>
+                </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Product
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="head">
+                    Seller
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-3">
+                    <div class="height">
+                            <img title="Solo Wireless" src="{{ url_for('static',filename='img/headphone5.jpg') }}" alt="Solo Wireless">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="myorders">
+                        1990
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/headphone5.html">
+                                    <u>
+                                        Solo Wireless
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="myorders">
+                                <a href="../HTML/beats.html">
+                                    <u>
+                                        Beats Store
+                                    </u>
+                                </a>
+                            </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

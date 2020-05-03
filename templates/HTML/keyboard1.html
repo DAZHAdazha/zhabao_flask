@@ -1,0 +1,53 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+BlackWidow
+{% endblock %}
+
+{% block product_name2 %}
+BlackWidow
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/keyboard1.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Razer BlackWidow gaming keyboard
+{% endblock %}
+
+{% block product_price %}
+799
+{% endblock %}
+
+{% block product_store %}
+Razer Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/razer.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Razer™ Mechanical Switches with 50g actuation force</li>
+<li>80 million keystroke life span</li>
+<li>Chroma customizable backlighting with 16.8 million color options</li>
+<li>Compact layout</li>
+<li>Military grade metal top construction</li>
+<li>Razer Synapse enabled</li>
+<li>10 key roll-over anti-ghosting</li>
+<li>Fully programmable keys with on-the-fly macro recording</li>
+<li>Gaming mode option</li>
+<li>Cable management routing</li>
+<li>1000 Hz Ultrapolling</li>
+<li>Braided fiber cable</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='BlackWidow') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='BlackWidow,') }}
+{% endblock %}

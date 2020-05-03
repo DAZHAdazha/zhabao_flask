@@ -1,0 +1,49 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Huawei Mate 30 Pro
+{% endblock %}
+
+{% block product_name2 %}
+Huawei Mate 30 Pro
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/phone2.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Huawei Mate 30 Pro
+{% endblock %}
+
+{% block product_price %}
+5400
+{% endblock %}
+
+{% block product_store %}
+Huawei Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/huawei.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Colour: 16.7 million colours</li>
+<li>Type: OLED</li>
+<li>Resolution: FHD+ 2400 x 1176</li>
+<li>Size: 6.53 inches</li>
+<li>CPU: 2 x Cortex-A76 Based 2.86 GHz + 2 x Cortex-A76 Based 2.36 GHz + 4 x Cortex-A55 1.95 GHz
+</li>
+<li>GPU: 16-Core Mali-G76</li>
+<li>NPU: Dual Big Core + Tiny Core NPUs (Neural-network Processing Unit)</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Mate 30 Pro') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Mate 30 Pro,') }}
+{% endblock %}

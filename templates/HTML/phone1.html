@@ -1,0 +1,49 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+iphone XR 128GB
+{% endblock %}
+
+{% block product_name2 %}
+iphone XR 128GB
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/phone1.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+iphone XR 128GB
+{% endblock %}
+
+{% block product_price %}
+5500
+{% endblock %}
+
+{% block product_store %}
+Apple Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/apple.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Width: 77.2 mm</li>
+<li>Height: 163.1 mm</li>
+<li>Depth: 8.8 mm</li>
+<li>Weight:Approx 206 g (including the battery)</li>
+<li>Size: 6.59 inches</li>
+<li>Colour: 16.7 million colours</li>
+<li>Type: TFT LCD (LTPS)</li>
+<li>Resolution: FHD+ 2340 x 1080</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='iphone XR') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='iphone XR,') }}
+{% endblock %}

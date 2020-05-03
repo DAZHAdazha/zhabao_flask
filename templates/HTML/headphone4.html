@@ -1,0 +1,47 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Bose NC700
+{% endblock %}
+
+{% block product_name2 %}
+Bose NC700
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/headphone4.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Bose NC700 HiFi wireless headphone
+{% endblock %}
+
+{% block product_price %}
+2000
+{% endblock %}
+
+{% block product_store %}
+Bose Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/bose.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Bluetooth version: Bluetooth 5.0</li>
+<li>Bluetooth range: Up to 33 ft (10 m)</li>
+<li>Battery charging time: Up to 2.5 hours</li>
+<li>Quick charge time: 15 min for 3.5 hours</li>
+<li>Battery life: Up to 20 hours</li>
+<li>USB-C connection</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Bose NC700') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Bose NC700,') }}
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Razer Huntsman Elite
+{% endblock %}
+
+{% block product_name2 %}
+Razer Huntsman Elite
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/keyboard6.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Razer Huntsman Elite
+{% endblock %}
+
+{% block product_price %}
+1349
+{% endblock %}
+
+{% block product_store %}
+Razer Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/razer.html
+{% endblock %}
+
+{% block product_specification %}
+                        <li>Razer Optical Switch with 45 G actuation force</li>
+                        <li>100 million keystroke lifespan</li>
+                        <li>Chroma backlighting with 16.8 million customizable color options</li>
+                        <li>Underglow lighting with 38 customization zones</li>
+                        <li>Ergonomic Wrist Rest with 20 customization zones underglow</li>
+                        <li>Multi-functional digital dial</li>
+                        <li>Dedicated media controls</li>
+                        <li>Hybrid onboard storage – up to 5 profiles</li>
+                        <li>Razer Synapse 3 enabled</li>
+                        <li>Fully programmable keys with on-the-fly macro recording</li>
+                        <li>10 key roll-over with anti-ghosting</li>
+                        <li>Gaming mode option</li>
+                        <li>Braided Fiber Cable</li>
+                        <li>1000 Hz Ultrapolling</li>
+                        <li>Aluminum matte top plate</li>
+                        <li>Compatible with Xbox One for basic input</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Huntsman') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Huntsman,') }}
+{% endblock %}

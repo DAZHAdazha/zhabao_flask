@@ -1,0 +1,77 @@
+{% extends './navi.html' %}
+{% block main %}
+
+<div class="main-promote clear-float">
+    <div class="containers">
+        <div class="sub-promote">
+            <div class="col-4">
+                <div class="list">
+                    <img title="{% block product_name %}{% endblock %}" src="{% block product_img %}{% endblock %}"
+                        alt="{% block product_name2 %}{% endblock %}">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="order">
+                    {% block product_title %}{% endblock %}
+                </div>
+                <div class="order price">
+                    <div>
+                        Price:
+                        <span class="imp">
+                            {% block product_price %}{% endblock %}
+                        </span>
+                    </div>
+                </div>
+                <div class="order">
+                    <div>
+                        Seller:
+                        <a href="{% block product_path %}{% endblock %}">
+                            <u>
+                                {% block product_store %}{% endblock %}
+                            </u>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                <form action="{% block form_action2 %}{% endblock %}">
+                <button id="remove_cart" class="btn btn-lg btn-danger" type="submit">
+                    Remove cart
+                </button>
+                </form>
+                <form action="{% block form_action %}{% endblock %}">
+                    <button id="add_cart" class="btn btn-lg btn-danger" type="submit">
+                        Add to cart
+                    </button>
+                </form>
+            </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="containers Specs">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        &nbsp
+        <hr />
+        <div class="col-3">
+            Tech Specs
+        </div>
+        <div class="col-6">
+            <ul>
+                {% block product_specification %}{% endblock %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

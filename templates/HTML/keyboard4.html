@@ -1,0 +1,48 @@
+{% extends './HTML/product.html' %}
+
+{% block product_name %}
+Zowie BenQ
+{% endblock %}
+
+{% block product_name2 %}
+Zowie BenQ
+{% endblock %}
+
+<!-- 注意继承图片链接时必须将url_for函数整体写下来，如下面所示，不能只定义block位文件路径 -->
+{% block product_img %}
+{{ url_for('static',filename='img/keyboard4.jpg') }}
+{% endblock %}
+
+{% block product_title %}
+Zowie BenQ Gaming keyboard for gamer
+{% endblock %}
+
+{% block product_price %}
+800
+{% endblock %}
+
+{% block product_store %}
+Zowie Official Store
+{% endblock %}
+
+{% block product_path %}
+../HTML/zowie.html
+{% endblock %}
+
+{% block product_specification %}
+<li>Optimal and more precise pretravel</li>
+<li>High quality iron spring, consistent keystroke and improved durability</li>
+<li>Optical switches, avoid double key presses</li>
+<li>No drivers needed, plug & play</li>
+<li>Red LED backlit keys with adjustable brightness</li>
+<li>RTR (Real Time Response,1x 2x 4x 8x) via PS/2 interface</li>
+<li>100% N-Key Rollover</li>
+{% endblock %}
+
+{% block form_action %}
+{{ url_for('addCart', product_name='Zowie BenQ') }}
+{% endblock %}
+
+{% block form_action2 %}
+{{ url_for('removeCart', product_name='Zowie BenQ,') }}
+{% endblock %}
